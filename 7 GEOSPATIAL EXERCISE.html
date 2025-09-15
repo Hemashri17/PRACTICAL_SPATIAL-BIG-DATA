@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Map Legend</title>
+<style>
+    .legend {
+        width: 200px;
+        margin: 50px auto;
+        font-family: Arial, sans-serif;
+    }
+    .legend-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    .color-box {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+    }
+    .vegetation { background-color: green; }
+    .water { background-color: blue; }
+    .urban { background-color: red; }
+</style>
+</head>
+<body>
+<h1 style="text-align:center;">Map Legend</h1>
+<div class="legend">
+    <div class="legend-item"><div class="color-box vegetation"></div>Vegetation</div>
+    <div class="legend-item"><div class="color-box water"></div>Water</div>
+    <div class="legend-item"><div class="color-box urban"></div>Urban</div>
+</div>
+</body>
+</html>

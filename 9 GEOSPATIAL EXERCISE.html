@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Interactive Map</title>
+<style>
+    .map-container {
+        position: relative;
+        width: 600px;
+        margin: 50px auto;
+    }
+    img { width: 100%; border: 1px solid #333; }
+    .label {
+        position: absolute;
+        background-color: rgba(255,255,255,0.9);
+        padding: 5px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+    .tooltip {
+        display: none;
+        position: absolute;
+        background-color: #2c3e50;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 14px;
+        top: -30px;
+        left: 30px;
+    }
+    .label:hover .tooltip {
+        display: block;
+    }
+</style>
+</head>
+<body>
+<h1 style="text-align:center;">India Interactive Map</h1>
+<div class="map-container">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/India_blank_map.png" alt="India Map">
+    <div class="label" style="top: 50px; left: 300px;">Delhi
+        <div class="tooltip">Population: 18M<br>Landmark: Red Fort</div>
+    </div>
+    <div class="label" style="top: 250px; left: 450px;">Chennai
+        <div class="tooltip">Population: 10M<br>Landmark: Marina Beach</div>
+    </div>
+    <div class="label" style="top: 150px; left: 200px;">Mumbai
+        <div class="tooltip">Population: 20M<br>Landmark: Gateway of India</div>
+    </div>
+</div>
+</body>
+</html>
