@@ -1,0 +1,11 @@
+<div id="legend">
+  <p id="veg" style="background:green; color:white;">Vegetation</p>
+</div>
+<input type="color" id="colorPicker">
+<button onclick="changeColor()">Change Color</button>
+
+<script>
+function changeColor(){
+  document.getElementById("veg").style.background = document.getElementById("colorPicker").value;
+}
+</script>

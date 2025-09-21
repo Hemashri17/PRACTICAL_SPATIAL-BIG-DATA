@@ -1,0 +1,14 @@
+<h2>Weather Dashboard</h2>
+<input id="place" placeholder="Location">
+<input id="temp" placeholder="Temperature">
+<button onclick="updateWeather()">Update</button>
+
+<div id="dashboard"></div>
+
+<script>
+function updateWeather(){
+  let p = document.getElementById("place").value;
+  let t = document.getElementById("temp").value;
+  document.getElementById("dashboard").innerHTML = `<h3>${p}</h3><p>Temperature: ${t}°C</p>`;
+}
+</script>

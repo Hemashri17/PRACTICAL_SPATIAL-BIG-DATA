@@ -1,0 +1,17 @@
+<table border="1" id="cityTable">
+  <tr><th>City</th><th>Latitude</th><th>Longitude</th></tr>
+  <tr><td>Chennai</td><td>13.0827° N</td><td>80.2707° E</td></tr>
+  <tr><td>Delhi</td><td>28.7041° N</td><td>77.1025° E</td></tr>
+</table>
+
+<script>
+let rows = document.querySelectorAll("#cityTable tr");
+rows.forEach((row, index) => {
+  if(index===0) return; // skip header
+  row.onclick = function(){
+    rows.forEach(r => r.style.background=""); 
+    this.style.background = "lightyellow";
+    alert("You selected " + this.cells[0].innerText + " – " + this.cells[1].innerText + ", " + this.cells[2].innerText);
+  }
+});
+</script>

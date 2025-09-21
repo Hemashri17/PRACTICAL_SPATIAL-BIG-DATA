@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>World Map Zoom</title>
+  <style>
+    img { width: 400px; transition: 0.3s; }
+    button { margin: 5px; }
+  </style>
+</head>
+<body>
+  <h2>Interactive World Map</h2>
+  <img id="map" src="https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg">
+  <br>
+  <button onclick="zoomIn()">Zoom In</button>
+  <button onclick="zoomOut()">Zoom Out</button>
+
+  <script>
+    let size = 400;
+    function zoomIn(){ size += 50; document.getElementById("map").style.width = size+"px"; }
+    function zoomOut(){ size -= 50; if(size>100) document.getElementById("map").style.width = size+"px"; }
+  </script>
+</body>
+</html>
