@@ -1,0 +1,15 @@
+<div style="border:1px solid #333; padding:10px; width:200px;">
+  <h3>India</h3>
+  <button onclick="toggleDetails()">Show/Hide Details</button>
+  <div id="details" style="display:none;">
+    <p>Population: 1.4B</p>
+    <p>Area: 3.28M km²</p>
+  </div>
+</div>
+
+<script>
+function toggleDetails(){
+  let d = document.getElementById("details");
+  d.style.display = d.style.display==="none" ? "block" : "none";
+}
+</script>

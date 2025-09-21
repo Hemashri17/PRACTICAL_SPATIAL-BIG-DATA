@@ -1,0 +1,16 @@
+<h2>City Map</h2>
+<button onclick="showInfo('Delhi')">Delhi</button>
+<button onclick="showInfo('Chennai')">Chennai</button>
+<button onclick="showInfo('Mumbai')">Mumbai</button>
+<div id="mapInfo"></div>
+
+<script>
+function showInfo(city){
+  let data = {
+    "Delhi": "Capital of India, population 19M.",
+    "Chennai": "Coastal city in Tamil Nadu, population 11M.",
+    "Mumbai": "Financial hub, population 20M."
+  };
+  document.getElementById("mapInfo").innerText = data[city];
+}
+</script>

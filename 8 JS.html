@@ -1,0 +1,12 @@
+<div id="report" style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
+  <div style="background:#ddd">Column 1</div>
+  <div style="background:#bbb">Column 2</div>
+</div>
+<button onclick="switchLayout()">Switch Layout</button>
+
+<script>
+function switchLayout(){
+  let r = document.getElementById("report");
+  r.style.gridTemplateColumns = (r.style.gridTemplateColumns==="1fr") ? "1fr 1fr" : "1fr";
+}
+</script>

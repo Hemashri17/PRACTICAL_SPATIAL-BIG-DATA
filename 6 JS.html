@@ -1,0 +1,14 @@
+<ul id="menu">
+  <li onclick="setActive(this,'Layers')">Layers</li>
+  <li onclick="setActive(this,'Analysis')">Analysis</li>
+  <li onclick="setActive(this,'Export')">Export</li>
+</ul>
+<p id="info"></p>
+
+<script>
+function setActive(el, page){
+  document.querySelectorAll("#menu li").forEach(li => li.style.background="");
+  el.style.background="lightblue";
+  document.getElementById("info").innerText = "You are on the " + page + " Page";
+}
+</script>

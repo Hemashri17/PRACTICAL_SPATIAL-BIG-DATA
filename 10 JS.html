@@ -1,0 +1,20 @@
+<form onsubmit="return validateForm()">
+  <input id="place" placeholder="Place Name"><br>
+  <input id="lat" placeholder="Latitude"><br>
+  <input id="lon" placeholder="Longitude"><br>
+  <button type="submit">Submit</button>
+</form>
+<p id="error" style="color:red"></p>
+
+<script>
+function validateForm(){
+  let lat = parseFloat(document.getElementById("lat").value);
+  let lon = parseFloat(document.getElementById("lon").value);
+  if(lat<-90 || lat>90 || lon<-180 || lon>180){
+    document.getElementById("error").innerText = "Invalid coordinates!";
+    return false;
+  }
+  alert("Data submitted successfully!");
+  return true;
+}
+</script>

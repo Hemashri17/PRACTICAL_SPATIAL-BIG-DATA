@@ -1,0 +1,12 @@
+<h3 onclick="toggle('gis')">GIS</h3>
+<p id="gis" style="display:none;">Geographic Information System for spatial data analysis.</p>
+
+<h3 onclick="toggle('ndvi')">NDVI</h3>
+<p id="ndvi" style="display:none;">Normalized Difference Vegetation Index, used for vegetation health.</p>
+
+<script>
+function toggle(id){
+  let el = document.getElementById(id);
+  el.style.display = (el.style.display==="none") ? "block" : "none";
+}
+</script>
