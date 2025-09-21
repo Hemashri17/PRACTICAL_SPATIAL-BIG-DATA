@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Polygon Example</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <style>#map { height: 500px; }</style>
+</head>
+<body>
+  <div id="map"></div>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script>
+    var map = L.map('map').setView([11, 78], 6);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+
+    var tamilNadu = [
+      [13.08,80.27], [11.02,77.0], [10.0,78.0], [9.5,79.5], [11.5,80.0]
+    ];
+
+    L.polygon(tamilNadu, {color:"green", fillColor:"green", fillOpacity:0.5}).addTo(map);
+  </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Polyline River</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <style>#map { height: 500px; }</style>
+</head>
+<body>
+  <div id="map"></div>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script>
+    var map = L.map('map').setView([25, 85], 5);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+
+    var ganga = [
+      [30.0,79.0],[27.0,81.0],[25.0,85.0],[22.0,88.0]
+    ];
+
+    L.polyline(ganga, {color:"blue", dashArray:"5,10"}).addTo(map);
+  </script>
+</body>
+</html>
